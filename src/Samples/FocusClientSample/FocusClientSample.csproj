@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Galaxy.Core\Galaxy.Core.csproj" />
+    <ProjectReference Include="..\..\Extensions\Galaxy.Extension.FocusClient\Galaxy.Extension.FocusClient.csproj" />
+  </ItemGroup>
+
+
+</Project>
