@@ -1,5 +1,4 @@
-﻿using Galaxy.Core.MessagQueue;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Galaxy.Core.Messaging
 {

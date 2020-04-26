@@ -2,6 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>Libra</Authors>
+    <Company>Huatek</Company>
+    <Description>Focus网关注册组件</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
