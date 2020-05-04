@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Galaxy.Core.Abstractions;
 
 namespace Galaxy.Extension.FocusClient
 {
-    public class FocusClientOptions
+    public class FocusClientOptions : ExtensionOptions
     {
         public string AppName { get; set; }
 

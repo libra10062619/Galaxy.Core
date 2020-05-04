@@ -6,7 +6,7 @@ namespace Microsoft.AspNetCore.Builder
 {
     public static class GalaxyAppBuilderExtensions
     {
-        public static IApplicationBuilder UseGalaxy(this IApplicationBuilder app)
+        public static IApplicationBuilder BuildGalaxy(this IApplicationBuilder app)
         {
             Ensure.NotNull(app);
             

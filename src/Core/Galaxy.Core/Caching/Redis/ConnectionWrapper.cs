@@ -1,5 +1,4 @@
-﻿using System;
-using System.Net;
+﻿using System.Net;
 using StackExchange.Redis;
 
 namespace Galaxy.Core.Caching.Redis

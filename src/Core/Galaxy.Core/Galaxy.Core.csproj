@@ -5,12 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="EventBus\**" />
+    <Compile Remove="Messaging\**" />
     <Compile Remove="MessagQueue\**" />
-    <EmbeddedResource Remove="EventBus\**" />
+    <EmbeddedResource Remove="Messaging\**" />
     <EmbeddedResource Remove="MessagQueue\**" />
-    <None Remove="EventBus\**" />
+    <None Remove="Messaging\**" />
     <None Remove="MessagQueue\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Exceptions\TransportException.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,6 +24,10 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.3" />
     <PackageReference Include="Polly" Version="7.2.0" />
     <PackageReference Include="StackExchange.Redis" Version="2.1.30" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
   </ItemGroup>
 
 </Project>

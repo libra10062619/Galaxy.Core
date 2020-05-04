@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Galaxy.Extension.FocusClient
+﻿namespace Galaxy.Extension.FocusClient
 {
     public class FocusMetadata
     {

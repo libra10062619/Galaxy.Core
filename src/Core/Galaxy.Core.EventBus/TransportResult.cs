@@ -1,9 +1,8 @@
-﻿using Galaxy.Core.Exceptions;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Galaxy.Core.Messaging
+namespace Galaxy.Core.EventBus
 {
     public class TransportResult
     {

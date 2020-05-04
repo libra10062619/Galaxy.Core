@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 namespace FocusClientSample
 {
@@ -21,6 +22,12 @@ namespace FocusClientSample
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddLogging(builder =>
+            {
+                builder.AddConsole();
+                builder.AddDebug();
+            });
 
             services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
 
@@ -41,7 +48,7 @@ namespace FocusClientSample
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseGalaxy();
+            app.BuildGalaxy();
 
             app.UseRouting();
 

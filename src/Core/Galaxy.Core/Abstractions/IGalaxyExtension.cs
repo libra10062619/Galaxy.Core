@@ -1,7 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Galaxy.Core.Abstractions
 {
@@ -24,5 +22,26 @@ namespace Galaxy.Core.Abstractions
         }
 
         protected abstract void RegisterServices(IServiceCollection services);
+    }
+
+    public abstract class GalaxyExtension<TOptions> : GalaxyExtension
+        where TOptions : ExtensionOptions
+    {
+        public TOptions ExtOptions { get; }
+
+        public GalaxyExtension(Action<TOptions> setupAction)
+        {
+            if (null == setupAction) throw new ArgumentNullException(nameof(setupAction));
+
+            ExtOptions = Activator.CreateInstance<TOptions>();
+            setupAction(ExtOptions);
+        }
+
+        public override void Register(IServiceCollection services)
+        {
+            services.AddOptions<TOptions>();
+            services.AddSingleton(ExtOptions);
+            RegisterServices(services);
+        }
     }
 }

@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Galaxy.Core.Exceptions
+namespace Galaxy.Core.EventBus
 {
     public class TransportException : Exception
     {
