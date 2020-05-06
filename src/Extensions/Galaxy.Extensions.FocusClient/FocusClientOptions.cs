@@ -1,6 +1,6 @@
 ﻿using Galaxy.Core.Abstractions;
 
-namespace Galaxy.Extension.FocusClient
+namespace Galaxy.Extensions.FocusClient
 {
     public class FocusClientOptions : ExtensionOptions
     {

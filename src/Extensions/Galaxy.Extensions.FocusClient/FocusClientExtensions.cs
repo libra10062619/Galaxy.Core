@@ -1,6 +1,6 @@
 ﻿using Galaxy.Core;
 using Galaxy.Core.Abstractions;
-using Galaxy.Extension.FocusClient;
+using Galaxy.Extensions.FocusClient;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 

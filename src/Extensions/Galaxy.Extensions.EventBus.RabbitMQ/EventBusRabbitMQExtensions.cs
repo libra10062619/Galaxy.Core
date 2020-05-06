@@ -25,11 +25,10 @@ namespace Galaxy.Extensions.DependencyInjection
         { 
         }
 
-        protected override void RegisterServices(IServiceCollection services)
+        protected override void RegisterEventBus(IServiceCollection services)
         {
-            services.AddSingleton<IEventBus, EventBusRabbitMQ>();
             services.AddSingleton<IConnectionManager, ConnectionManager>();
-            base.RegisterServices(services);
+            services.AddSingleton<IEventBus, EventBusRabbitMQ>();            
         }
     }
 }

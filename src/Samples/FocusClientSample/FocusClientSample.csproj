@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Galaxy.Core\Galaxy.Core.csproj" />
-    <ProjectReference Include="..\..\Extensions\Galaxy.Extension.FocusClient\Galaxy.Extension.FocusClient.csproj" />
+    <ProjectReference Include="..\..\Extensions\Galaxy.Extensions.FocusClient\Galaxy.Extensions.FocusClient.csproj" />
   </ItemGroup>
 
 

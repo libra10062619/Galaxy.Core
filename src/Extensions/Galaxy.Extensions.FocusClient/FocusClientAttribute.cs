@@ -2,7 +2,7 @@
 using System;
 using System.Text.RegularExpressions;
 
-namespace Galaxy.Extension.FocusClient
+namespace Galaxy.Extensions.FocusClient
 {
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
     public class FocusClientAttribute : RouteAttribute

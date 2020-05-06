@@ -1,4 +1,4 @@
-﻿namespace Galaxy.Extension.FocusClient
+﻿namespace Galaxy.Extensions.FocusClient
 {
     public class FocusMetadata
     {

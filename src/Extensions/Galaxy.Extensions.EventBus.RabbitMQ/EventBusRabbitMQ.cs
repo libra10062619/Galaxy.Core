@@ -233,7 +233,6 @@ namespace Galaxy.Extensions.EventBus.RabbitMQ
 
                 _logger.LogTrace($"Removed Subscription");
                 _connectionManager.TryConnect();
-
                 var channel = _connectionManager.Rent();
                 channel.QueueUnbind(args.QueueName, exchange: _options.ExchangeName, routingKey: args.EventName);
             };

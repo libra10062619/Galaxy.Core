@@ -12,7 +12,7 @@ namespace Galaxy.Extensions.EventBus.RabbitMQ
     {
         bool IsConnected { get; }
 
-        IConnection TryConnect();
+        bool TryConnect();
 
         IModel Rent();
 
@@ -52,9 +52,9 @@ namespace Galaxy.Extensions.EventBus.RabbitMQ
             };
         }
 
-        public IConnection TryConnect()
+        public bool TryConnect()
         {
-            if (IsConnected) return _connection;
+            if (IsConnected) return true;
 
             _connection = _connectionFactory.CreateConnection(_options.Host.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries), _options.ClientProviderName);
             _connection.ConnectionBlocked += (sender, args) =>
@@ -76,7 +76,7 @@ namespace Galaxy.Extensions.EventBus.RabbitMQ
                 TryConnect();
             };
 
-            return _connection;
+            return true;
         }
 
         public IModel CreateModel()
